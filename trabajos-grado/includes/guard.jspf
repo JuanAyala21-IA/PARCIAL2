@@ -1,0 +1,26 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<fmt:requestEncoding value="UTF-8" />
+<%--
+  guard.jspf
+  Importar al inicio de cada pagina protegida, ANTES de cualquier salida HTML:
+    <c:set var="rolesPermitidos" value="ADMINISTRADOR,COORDINACION" scope="request" />
+    <c:import url="includes/guard.jsp" />
+  Sin sesion (sessionScope.usuarioId vacio) -> redirige a login.jsp.
+  Si la pagina definio requestScope.rolesPermitidos (lista separada por comas)
+  y el rol en sesion no esta incluido -> redirige a acceso-denegado.jsp.
+  Sin rolesPermitidos: basta con estar autenticado.
+--%>
+<c:if test="${empty sessionScope.usuarioId}">
+  <c:redirect url="login.jsp" />
+</c:if>
+<c:if test="${not empty requestScope.rolesPermitidos}">
+  <c:set var="_lista" value="${fn:replace(requestScope.rolesPermitidos, ' ', '')}" />
+  <c:set var="_todos" value=",${_lista}," />
+  <c:set var="_mio" value=",${sessionScope.rol}," />
+  <c:if test="${not fn:contains(_todos, _mio)}">
+    <c:redirect url="acceso-denegado.jsp" />
+  </c:if>
+</c:if>

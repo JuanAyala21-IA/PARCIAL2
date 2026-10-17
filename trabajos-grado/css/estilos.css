@@ -1,0 +1,488 @@
+/* Sistema de Trabajos de Grado - paleta verde lima / gris */
+:root {
+  --lima: #BFD730;
+  --lima-oscuro: #9DB324;
+  --gris-fondo: #eef0f2;
+  --gris-texto: #5b6268;
+  --blanco: #ffffff;
+}
+
+body {
+  background: var(--gris-fondo);
+  color: #333;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar blanco con tarjetas redondeadas */
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background: var(--blanco);
+  border-radius: 0 20px 20px 0;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.08);
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #f7f8f5;
+  border-radius: 14px;
+  padding: 0.75rem;
+}
+
+.brand-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--lima);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #2f3305;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-text strong {
+  font-size: 0.85rem;
+}
+
+.brand-text span {
+  font-size: 0.75rem;
+  color: var(--gris-texto);
+  letter-spacing: 2px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 0.9rem;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #444;
+  background: #f4f5f6;
+  font-size: 0.92rem;
+}
+
+.menu-item i {
+  width: 20px;
+  text-align: center;
+}
+
+.menu-item:hover {
+  background: #e9ecdf;
+  color: #222;
+}
+
+/* Item activo en verde lima */
+.menu-item.active {
+  background: var(--lima);
+  color: #22291a;
+  font-weight: 600;
+}
+
+.sidebar-foot {
+  margin-top: auto;
+  text-align: center;
+}
+
+.rol-badge {
+  display: inline-block;
+  background: #2f3336;
+  color: #fff;
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+}
+
+.rol-badge.rol-invitado {
+  background: #8a9096;
+}
+
+/* Zona principal */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.topbar {
+  background: var(--blanco);
+  border-radius: 16px;
+  margin: 1rem 1.25rem 0 1.25rem;
+  padding: 0.8rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.bienvenido {
+  color: var(--gris-texto);
+  font-size: 0.9rem;
+}
+
+.username {
+  font-weight: 600;
+}
+
+.contenido {
+  padding: 1.25rem;
+}
+
+.pie {
+  text-align: center;
+  color: var(--gris-texto);
+  padding: 1rem;
+  font-size: 0.85rem;
+}
+
+.card-lima {
+  border: none;
+  border-radius: 16px;
+  border-top: 6px solid var(--lima);
+}
+
+/* Login */
+.login-page {
+  background: var(--gris-fondo);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.login-wrap {
+  width: 100%;
+  max-width: 420px;
+}
+
+.login-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.login-logo strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.login-logo span {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--gris-texto);
+}
+
+.login-card {
+  border: none;
+  border-radius: 16px;
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.badge-sesion {
+  background: #2f3336;
+  color: #fff;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  padding: 0.3rem 0.6rem;
+}
+
+.btn-lima {
+  background: var(--lima);
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #22291a;
+}
+
+.btn-lima:hover {
+  background: var(--lima-oscuro);
+  color: #141a05;
+}
+
+.login-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 0.88rem;
+}
+
+/* Nombre de usuario como disparador del desplegable */
+a.username {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Insignia verde lima para titulos de lista */
+.badge-lima {
+  background: var(--lima);
+  color: #22291a;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  padding: 0.3rem 0.6rem;
+  vertical-align: middle;
+}
+
+/* Barra de herramientas de tablas (registros por pagina + buscador) */
+.tabla-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Pagina activa de la paginacion en verde lima */
+.pagination .page-link {
+  color: #333;
+}
+
+.pagination .page-item.active .page-link {
+  background: var(--lima);
+  border-color: var(--lima);
+  color: #22291a;
+  font-weight: 700;
+}
+
+/* Insignias de fase (lima claro) y turno/estado (amarillo claro) */
+.badge-fase {
+  display: inline-block;
+  background: #e9f2c4;
+  color: #4d5c0a;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+  margin-right: 0.3rem;
+}
+
+.badge-turno {
+  display: inline-block;
+  background: #fff3cd;
+  color: #664d03;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+}
+
+/* Boton morado (seguimiento) */
+.btn-morado {
+  background: #6f42c1;
+  border: none;
+  color: #fff;
+}
+
+.btn-morado:hover {
+  background: #5a35a0;
+  color: #fff;
+}
+
+/* Boton verde oscuro (bandera de metas) */
+.btn-bandera {
+  background: var(--lima-oscuro);
+  border: none;
+  color: #22291a;
+}
+
+.btn-bandera:hover {
+  background: var(--lima-oscuro);
+  color: #22291a;
+  filter: brightness(0.92);
+}
+
+/* Tarjetas de fases del seguimiento */
+.fases-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .fases-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .fases-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .fases-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fase-card {
+  border-radius: 16px;
+  padding: 1.25rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 230px;
+}
+
+.fase-card h5 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.fase-card p {
+  font-size: 0.85rem;
+  margin: 0;
+  flex: 1;
+}
+
+.fase-icon {
+  font-size: 2.4rem;
+}
+
+/* Completada: fondo lima, texto blanco */
+.fase-card.completada {
+  background: var(--lima);
+  color: #fff;
+}
+
+.fase-card.completada p {
+  color: #fff;
+}
+
+/* En curso: fondo lima, texto oscuro */
+.fase-card.en-curso {
+  background: var(--lima);
+  color: #22291a;
+}
+
+.fase-card.en-curso p {
+  color: #3c4413;
+}
+
+/* Pendiente: fondo blanco, borde suave, sin boton */
+.fase-card.pendiente {
+  background: var(--blanco);
+  border: 1px solid #dee2e6;
+  color: var(--gris-texto);
+}
+
+.fase-card.pendiente .fase-icon {
+  color: #2f3336;
+}
+
+/* Informes: tarjetas resumen y pestañas */
+.resumen-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .resumen-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .resumen-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.resumen-card {
+  background: var(--blanco);
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  border-top: 6px solid var(--lima);
+}
+
+.resumen-num {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #22291a;
+}
+
+.resumen-txt {
+  font-size: 0.85rem;
+  color: var(--gris-texto);
+}
+
+.nav-tabs .nav-link {
+  color: #444;
+}
+
+.nav-tabs .nav-link.active {
+  background: var(--lima);
+  border-color: var(--lima);
+  color: #22291a;
+  font-weight: 700;
+}
+
+/* Calendario: evento de hoy y fecha compacta */
+.evento-hoy {
+  border: 2px solid var(--lima);
+  background: #f7f9e8;
+}
+
+.evento-fecha {
+  background: #2f3336;
+  color: #fff;
+  font-size: 0.75rem;
+  border-radius: 8px;
+  padding: 0.3rem 0.6rem;
+  margin-right: 0.4rem;
+}
+
+/* Observaciones con saltos de línea respetados */
+.texto-multilinea {
+  white-space: pre-wrap;
+}

@@ -1,0 +1,9 @@
+# Archivos que NO se copian a la imagen Docker
+.git
+.gitignore
+.gitattributes
+README.md
+render.yaml
+trabajos-grado/docs
+trabajos-grado/sql
+trabajos-grado/run-proyecto.bat

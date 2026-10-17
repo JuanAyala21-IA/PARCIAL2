@@ -1,0 +1,6 @@
+# Normalizar finales de linea en el repositorio (LF)
+* text=auto
+
+# Archivos que DEBEN conservar finales de linea LF (se usan en Linux/Docker)
+Dockerfile text eol=lf
+*.sh text eol=lf
