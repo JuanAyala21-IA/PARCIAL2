@@ -20,7 +20,8 @@
 <%-- Fecha actual desde la BD (sin beans Java) --%>
 <c:catch var="dbError">
   <sql:query var="f" dataSource="${db}">
-    SELECT CURDATE() AS hoy, MONTH(CURDATE()) AS mes_actual, YEAR(CURDATE()) AS anio_actual
+    -- CAST requerido: en MySQL 8 el driver entrega YEAR() como fecha, no como numero
+    SELECT CURDATE() AS hoy, MONTH(CURDATE()) AS mes_actual, CAST(YEAR(CURDATE()) AS UNSIGNED) AS anio_actual
   </sql:query>
 </c:catch>
 <fmt:formatDate var="hoyStr" value="${f.rows[0].hoy}" pattern="yyyy-MM-dd" />
