@@ -97,7 +97,7 @@
     </div>
 
     <div class="login-links">
-      <a href="bienvenida.jsp" class="text-decoration-none text-secondary fw-semibold">
+      <a href="bienvenida.jsp" class="text-decoration-none fw-semibold">
         <i class="fa-solid fa-arrow-left"></i> Volver al inicio
       </a>
     </div>

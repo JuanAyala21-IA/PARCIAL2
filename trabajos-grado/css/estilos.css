@@ -270,6 +270,16 @@ body {
   font-size: 0.88rem;
 }
 
+.login-links a {
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, .55);
+  transition: color .15s;
+}
+
+.login-links a:hover {
+  color: var(--lima);
+}
+
 /* Nombre de usuario como disparador del desplegable */
 a.username {
   text-decoration: none;
