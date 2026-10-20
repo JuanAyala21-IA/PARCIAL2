@@ -175,7 +175,7 @@ body {
 /* Login con imagen de fondo (si img/login-fondo.jpg no existe, usa el degradado) */
 .login-page {
   background:
-    linear-gradient(120deg, rgba(16, 20, 10, .78), rgba(16, 20, 10, .45)),
+    linear-gradient(180deg, rgba(12, 16, 8, .62) 0%, rgba(12, 16, 8, .48) 45%, rgba(12, 16, 8, .70) 100%),
     url("../img/login-fondo.jpg") center / cover no-repeat,
     linear-gradient(135deg, #20241a, #3d4620);
   min-height: 100vh;
@@ -190,7 +190,12 @@ body {
 }
 
 .login-page .login-logo span {
-  color: rgba(255, 255, 255, .72);
+  color: rgba(255, 255, 255, .78);
+}
+
+.login-page .login-logo strong,
+.login-page .login-logo span {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, .45);
 }
 
 .login-page .login-card {
