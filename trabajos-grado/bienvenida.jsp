@@ -440,28 +440,6 @@
     .ld-step h3 { font-size: 1rem; font-weight: 800; margin-bottom: .35rem; }
     .ld-step p { font-size: .88rem; color: var(--gris); margin: 0; line-height: 1.6; }
 
-    /* Roles */
-    .ld-roles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.1rem; }
-    .ld-role {
-      background: linear-gradient(180deg, #fff, #fbfcf6);
-      border: 1px solid var(--linea);
-      border-radius: var(--radio);
-      padding: 1.5rem 1.3rem;
-    }
-    .ld-role-icon {
-      width: 46px;
-      height: 46px;
-      border-radius: 13px;
-      display: grid;
-      place-items: center;
-      background: var(--tinta);
-      color: var(--lima);
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-    }
-    .ld-role h3 { font-size: 1rem; font-weight: 800; margin-bottom: .35rem; }
-    .ld-role p { font-size: .86rem; color: var(--gris); margin: 0; line-height: 1.6; }
-
     /* Llamado final */
     .ld-cta {
       position: relative;
@@ -532,7 +510,6 @@
       .ld-hero-grid { grid-template-columns: 1fr; gap: 3rem; }
       .ld-features { grid-template-columns: repeat(2, 1fr); }
       .ld-steps { grid-template-columns: repeat(2, 1fr); }
-      .ld-roles { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 639.98px) {
       .ld-hero { padding: 2.7rem 0 2.8rem; }
@@ -543,7 +520,6 @@
       .ld-float { display: none; }
       .ld-preview-wrap { padding: .4rem; }
       .ld-steps { grid-template-columns: 1fr; }
-      .ld-roles { grid-template-columns: 1fr; }
       .ld-cta { flex-direction: column; align-items: flex-start; }
     }
     @media (prefers-reduced-motion: reduce) {
@@ -569,7 +545,6 @@
       <nav class="ld-links" aria-label="Secciones de la p&aacute;gina">
         <a href="#funcionalidades">Funcionalidades</a>
         <a href="#como-funciona">C&oacute;mo funciona</a>
-        <a href="#roles">Roles</a>
       </nav>
 
       <a class="btn btn-lima ld-btn-login" href="login.jsp">
@@ -753,40 +728,6 @@
             <p>Presenta la sustentaci&oacute;n, recibe tu evaluaci&oacute;n y cierra el proceso.</p>
           </li>
         </ol>
-      </div>
-    </section>
-
-    <!-- Roles -->
-    <section class="ld-section" id="roles">
-      <div class="container">
-        <div class="ld-section-head">
-          <span class="ld-kicker">Roles</span>
-          <h2>Un panel para cada rol</h2>
-          <p>Cada usuario ve las herramientas que necesita, con acceso controlado.</p>
-        </div>
-
-        <div class="ld-roles">
-          <article class="ld-role">
-            <span class="ld-role-icon"><i class="fa-solid fa-user-graduate"></i></span>
-            <h3>Estudiante</h3>
-            <p>Postula ideas, registra tu anteproyecto, entrega avances y consulta tus evaluaciones.</p>
-          </article>
-          <article class="ld-role">
-            <span class="ld-role-icon"><i class="fa-solid fa-chalkboard-user"></i></span>
-            <h3>Profesor</h3>
-            <p>Acompa&ntilde;a proyectos, revisa entregas, registra avales y eval&uacute;a sustentaciones.</p>
-          </article>
-          <article class="ld-role">
-            <span class="ld-role-icon"><i class="fa-solid fa-user-tie"></i></span>
-            <h3>Coordinaci&oacute;n</h3>
-            <p>Supervisa el proceso, gestiona el calendario y consulta informes del programa.</p>
-          </article>
-          <article class="ld-role">
-            <span class="ld-role-icon"><i class="fa-solid fa-gears"></i></span>
-            <h3>Administrador</h3>
-            <p>Administra usuarios, roles y la configuraci&oacute;n general del sistema.</p>
-          </article>
-        </div>
       </div>
     </section>
 
