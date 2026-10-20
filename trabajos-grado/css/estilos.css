@@ -172,14 +172,32 @@ body {
   border-top: 6px solid var(--lima);
 }
 
-/* Login */
+/* Login con imagen de fondo (si img/login-fondo.jpg no existe, usa el degradado) */
 .login-page {
-  background: var(--gris-fondo);
+  background:
+    linear-gradient(120deg, rgba(16, 20, 10, .78), rgba(16, 20, 10, .45)),
+    url("../img/login-fondo.jpg") center / cover no-repeat,
+    linear-gradient(135deg, #20241a, #3d4620);
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem 1rem;
+}
+
+.login-page .login-logo strong {
+  color: #fff;
+}
+
+.login-page .login-logo span {
+  color: rgba(255, 255, 255, .72);
+}
+
+.login-page .login-card {
+  background: rgba(255, 255, 255, .96);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .35);
 }
 
 .login-wrap {

@@ -61,7 +61,7 @@
       </div>
     </div>
 
-    <div class="card login-card shadow-sm">
+    <div class="card login-card">
       <div class="card-body">
         <h5 class="login-title">Iniciar <span class="badge-sesion">SESI&Oacute;N</span></h5>
 
